@@ -282,7 +282,7 @@ describe('serve', () => {
     it('should add a body-parser to the app', () => {
       const res = module._newExpressApp([]);
       expect(res.use).to.have.been.calledWith(sinon.match(value => {
-        return typeof value === 'function' && value.name === 'jsonParser';
+        return typeof value === 'function' && value.name === 'textParser';
       }));
     });
 
